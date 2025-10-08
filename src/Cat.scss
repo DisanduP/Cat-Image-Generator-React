@@ -1,0 +1,90 @@
+// Cat component styles for Random Cat Images
+.cat-generator {
+  min-height: 100vh;
+  
+  .header-content {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .btn {
+    background: transparent;
+    border: none;
+    background-color: rgb(216, 34, 74);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(196, 24, 64);
+    }
+
+    &:active {
+      background-color: rgb(176, 14, 54);
+    }
+
+    &:disabled {
+      background-color: rgb(136, 136, 136);
+      cursor: not-allowed;
+    }
+  }
+
+  .cats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+  }
+
+  .random_cats {
+    width: 40%;
+    max-width: 700px;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .container {
+    min-height: 60vh;
+  }
+
+  .loading {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px;
+    animation: pulse 2s infinite;
+  }
+
+  .error {
+    text-align: center;
+    color: rgb(216, 34, 74);
+    font-size: 18px;
+    padding: 20px;
+    background-color: rgba(216, 34, 74, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
